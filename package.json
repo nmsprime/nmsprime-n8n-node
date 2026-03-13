@@ -30,10 +30,10 @@
     "n8n-workflow": "*"
   },
   "dependencies": {
-    "@devlikeapro/n8n-openapi-node": "^0.1.4",
-    "n8n-workflow": "^1.48.0"
+    "@devlikeapro/n8n-openapi-node": "^0.1.4"
   },
   "devDependencies": {
+    "n8n-workflow": "*",
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^20.14.0",
     "js-yaml": "^4.1.0",
