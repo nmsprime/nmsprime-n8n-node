@@ -1,0 +1,42 @@
+{
+  "name": "n8n-nodes-nms-prime",
+  "version": "0.1.0",
+  "description": "n8n community node for NMS Prime API (OpenAPI scaffold)",
+  "keywords": ["n8n-community-node-package"],
+  "license": "MIT",
+  "homepage": "https://www.nmsprime.com",
+  "engines": {
+    "node": ">=18.10"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && mkdir -p dist/nodes/NmsPrime dist/credentials && cp nodes/NmsPrime/nmsPrime.svg dist/nodes/NmsPrime/ && cp nodes/NmsPrime/nmsPrime.svg dist/credentials/",
+    "dev": "tsc --watch",
+    "prepack": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/NmsPrimeApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/NmsPrime/NmsPrime.node.js"
+    ]
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  },
+  "dependencies": {
+    "@devlikeapro/n8n-openapi-node": "^0.1.4",
+    "n8n-workflow": "^1.48.0"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^20.14.0",
+    "js-yaml": "^4.1.0",
+    "typescript": "^5.5.3"
+  }
+}
