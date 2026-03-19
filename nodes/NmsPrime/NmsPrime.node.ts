@@ -32,10 +32,15 @@ export class NmsPrime implements INodeType {
     ],
     requestDefaults: {
       baseURL: '={{$credentials.baseUrl}}',
+      skipSslCertificateValidation:
+        '={{$credentials.skipSslCertificateValidation}}',
+      auth: {
+        username: '={{$credentials.username}}',
+        password: '={{$credentials.password}}',
+      },
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
-        Authorization: "={{ 'Bearer ' + $credentials.bearerToken }}",
       },
     },
     properties,
